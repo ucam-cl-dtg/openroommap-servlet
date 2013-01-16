@@ -8,7 +8,7 @@
 	</parent>
 	<artifactId>open-room-map</artifactId>
 	<packaging>war</packaging>
-	<version>1.0</version>
+	<version>1.0.1</version>
 	<name>Open-Room-Map web servlet</name>
 	<dependencies>
 		<dependency>
