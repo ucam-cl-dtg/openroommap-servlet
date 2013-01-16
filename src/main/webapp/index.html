@@ -1,214 +1,172 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
 <head>
- <title>Open room map</title>
- <link rel="stylesheet" type="text/css" href="http://www.cl.cam.ac.uk/UoCCL/style/camstyle.css" />
- <meta name="description" content="Open room map, Digital Technology Group, Computer Laboratory, University of Cambridge" />
- <meta name="keywords" content="open room map, sentient computing, performance analysis" />
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
-
-<Script Language="JavaScript">
-function load() {
-var load = window.open('http://www.cl.cam.ac.uk/research/dtg/openroommap/applet.html','','scrollbars=yes,menubar=no,height=760,width=1020,resizable=yes,toolbar=no,location=no,status=no');
-}
-</Script>
-<style>
-  p   { margin-left:1em; margin-right:1em}
-</style>
-
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Digital Technology Group, Computer Laboratory, University of Cambridge" />
+    <meta name="keywords" content="wireless sentient computing networking middleware" />
+    <meta name="google-site-verification" content="jNmXFTcD09K6lRhMJaLuOBxypBSppxRuZL2qUk4jNVQ" />
+    <link rel="Shortcut Icon" href="http://www.cl.cam.ac.uk/research/dtg/www/favicon.ico" />
+	<link rel="stylesheet" href="http://www.cl.cam.ac.uk/research/dtg/www/skins/bogdan/ucam/style/layout.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="http://www.cl.cam.ac.uk/research/dtg/www/skins/bogdan/ucam/style/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="http://www.cl.cam.ac.uk/research/dtg/www/skins/bogdan/style/style.css" type="text/css" media="all" />
+	<!--[if IE]>
+		<link rel="stylesheet" href="http://www.cl.cam.ac.uk/research/dtg/www/skins/bogdan/style/style-ie.css" type="text/css" media="screen" />
+	<![endif]-->
+	<!--[if IE 6]>
+		<link rel="stylesheet" href="http://www.cl.cam.ac.uk/research/dtg/www/skins/bogdan/ucam/images/ie6.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="http://www.cl.cam.ac.uk/research/dtg/www/skins/bogdan/ucam/javascript/minmax.js"></script>
+	<![endif]-->
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="http://www.cl.cam.ac.uk/research/dtg/www/skins/bogdan/ucam/style/ie7.css" type="text/css" media="screen" />
+	<![endif]-->
+	<!--[if lt IE 7]>
+		<script type="text/javascript" src="http://www.cl.cam.ac.uk/research/dtg/www/javascript/iepngfix_tilebg.js"></script>
+		<link rel="stylesheet" href="http://www.cl.cam.ac.uk/research/dtg/www/skins/bogdan/style/style-ie6.css" type="text/css" media="screen" />
+	<![endif]-->
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" href="http://www.cl.cam.ac.uk/research/dtg/www/skins/bogdan/style/style-ie7.css" type="text/css" media="screen" />
+	<![endif]-->
+    <script type="text/javascript" src="http://www.cl.cam.ac.uk/research/dtg/www/javascript/globals.js"></script>
+	<title>Digital Technology Group - OpenRoomMap - Edit</title>
+	    <script type="text/javascript" src="hookMouseWheel.js"></script>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript">
+swfobject.embedSWF("orm.swf", "myContent", "100%", "740", "9.0.0", "expressInstall.swf");
+function scroll_orm () { document.location.href = '#orm-pos'; }
+window.onload = scroll_orm;
+</script>
 </head>
-<body bgcolor="#000000" text="#FFFFFF" link="#003399" alink="#cc0000" vlink="#cc3333">
 
-<!-- university-wide global search bar -->
-<table cellpadding="0" cellspacing="0" border="0" width="98%" summary="navigation bar">
+<body class="home secondary " >
 
-<tr>
- <td bgcolor="#0099cc" width="98%">
-  <img src="pixel.gif" class="block" width="1" height="16" alt="" /></td>
- <td align="right" width="159" rowspan="2">
-  <table cellpadding="0" cellspacing="0" border="0" width="159">
-  <tr>
-   <td><a href="http://www.cam.ac.uk/global/search/">
-    <img src="http://www.cl.cam.ac.uk/UoCCL/images/search.gif" class="block" width="53" height="18" border="0" alt="/searching" /></a></td>
+<div id="skip"> <a href="#skip-content" accesskey="2">Skip to content</a> </div>
 
-   <td><a href="http://www.cam.ac.uk/global/az.html">
+<div id="header">
+	<div id="branding">
+		<a href="http://www.cam.ac.uk/" title="University of Cambridge" accesskey="1"><img src="http://www.cl.cam.ac.uk/research/dtg/www/images/cu.gif" alt="University of Cambridge" class="header-logo" /></a>
+		<a href="http://www.800.cam.ac.uk/" title="800 Years, 1209 - 2009" accesskey="2"><img src="http://www.cl.cam.ac.uk/research/dtg/www/images/800.gif" alt="800 Years, 1209 - 2009" class="header-logo" /></a>
+	</div> <!-- #branding ends -->
+	<div id="site-search">
+		<form action="http://www.cam.ac.uk/global/search" method="post">
+			<fieldset>
+			<label for="search-term">Search</label>
+			<input id="search-term" accesskey="4" name="search" />
+			<input id="search-button" src="http://www.cl.cam.ac.uk/research/dtg/www/skins/bogdan/ucam/images/button-search.gif" value="Search" alt="Search" title="Search" type="image" />
+			</fieldset>
+		</form>
+		<ul><!-- reverse order as the list is floated right -->
+			<li class="last"><a href="http://www.cam.ac.uk/global/search/">Email &amp; phone search</a></li>
+			<li><a href="http://www.cam.ac.uk/global/az.html">A-Z</a></li>
+			<li><a href="http://www.cam.ac.uk/global/contact.html">Global Contact</a></li>
+		</ul>
+	</div><!-- #site-search ends -->
 
-    <img src="http://www.cl.cam.ac.uk/UoCCL/images/az.gif" class="block" width="53" height="18" border="0" alt="A-Z index" /></a></td>
-   <td><a href="http://www.cam.ac.uk/global/help.html">
-    <img src="http://www.cl.cam.ac.uk/UoCCL/images/help.gif" class="block" width="53" height="18" border="0" alt="Help" /></a></td>
-  </tr>
-  </table>
- </td>
- </tr>
- <tr>
+</div> <!-- #header ends -->
 
-  <td bgcolor="#cccccc"><img src="pixel.gif" class="block" width="1" height="2" alt="" /></td>
- </tr>
-</table>
+<div id="container"> <a id="skip-content"></a>
+		<ul id="nav-breadcrumb">
+		<li class="first"><a href="http://www.cl.cam.ac.uk/">Computer Laboratory</a></li>
+		<li><a href="http://www.cl.cam.ac.uk/research/">Research</a></li>
+		<li><a href="http://www.cl.cam.ac.uk/research/dtg/www/./">Digital Technology Group</a></li>
+		        <li><a href="/research/dtg/openroommap/">Open Room Map</a></li> <li><a href="/research/dtg/openroommap/edit/">Edit</a></li>
+		<li id="nav-login">
+				<a href="http://www.cl.cam.ac.uk/research/dtg/www/login/"><strong>Raven login</strong></a>
+				</li>
+	</ul>
+	<!--breadcrumb-->
+	<div id="content">
+        <div id="sub-brand"><a  href="http://www.cl.cam.ac.uk/research/dtg/www/./" title="Digital Technology Group - Home"></a></div>
 
-<!-- department banner -->
-<table cellpadding="0" cellspacing="0" border="0" width="98%" summary="departmental header">
- <tr>
-  <td><a href="http://www.cam.ac.uk/"><img src="http://www.cl.cam.ac.uk/UoCCL/images/identifier2.gif" width="192" height="46" border="0" alt="University of Cambridge Home" /></a></td>
-  <td align="right" class="deptitle" valign="bottom">Digital Technology Group</td>
- </tr>
+		<div id="content-primary">
 
- <tr>
-  <td bgcolor="#0099cc" colspan="2"><img src="pixel.gif" class="block" width="1" height="4" alt="" /></td>
- </tr>
- <tr>
-  <td bgcolor="#cccccc" colspan="2"><img src="pixel.gif" class="block" width="1" height="2" alt=""/></td>
- </tr>
-</table>
+			
+<a id="orm-pos"></a><div class="subtitle">OpenRoomMap Editor</div>
 
-<!-- breadcrumb-start -->
-<table cellpadding="0" cellspacing="0" border="0" width="98%" summary="breadcrumb navigation">
-
- <tr>
-
-  <td align="left">
-   <a href="http://www.cl.cam.ac.uk/" class="bread">Computer&nbsp;Laboratory</a>
-   &nbsp;&gt;&nbsp; <a href="http://www.cl.cam.ac.uk/Research/DTG/" class="bread">DTG</a>
-   &nbsp;&gt;&nbsp; <a href="http://www.cl.cam.ac.uk/research/dtg/openroommap/"
-   class="bread">Open room map</a>
-  </td>
- </tr>
-</table>
-<!-- breadcrumb-end -->
+<div style="border:1px solid black; margin-right: 1em;">
+  <div id="myContent">
+	<h1>Please install flash!</h1>
+	<a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a>
+  </div>
+</div>
 
 
 
-<!-- content -->
+			
 
-<h1>OpenRoomMap</h1>
+		</div> <!-- content-primary -->
 
-<p>We want to collect a detailed indoor plan of the Computer
-Laboratory and we think that this information is best entered and kept
-up to date by building users themselves.  Please use the link below to
-launch our editor software which you can use to position furniture and
-appliances within the building.</p>
+		<div id="content-secondary">
+			<dl class="links section">
 
-<p>We are interested in as much detail as you are prepared to provide:
-the names of the floorboxes in your office, the location of air vents,
-the name of your workstation and the position of your desk and
-shelving.</p>
+				
 
-<p align="center"><a href="applet2.html"><b>Launch open room
-      map [in current window]</b></a>&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:load();">[in
-      new window]</a></p>
 
-<h2>Motivation</h2>
 
-<h3>Pedestrian navigation research</h3>
+				
 
-<p>This work uses inertial sensors (accelerometers and gyroscopes) to
-estimate the position of people within a building.  The system
-combines updates from these sensors with a map of the building in
-order to constrain the location estimates and derive an accurate
-location. Problems remain with this technique in particular with
-movement in large rooms or for repeated small movements (such as when
-sat at a desk or giving a presentation).  We are interested in whether
-constraints provided by information about the position of furniture
-within the building can help mitigate this problem.</p>
 
-<p align="right">For more information contact Oliver Woodman or see <a href="http://www.cl.cam.ac.uk/~ojw28/localisation.html">here</a></p>
+				<dt>The DTG Group</dt>
+				<dd><a href="http://www.cl.cam.ac.uk/research/dtg/www/./">About</a></dd>
+				<dd><a href="http://www.cl.cam.ac.uk/research/dtg/www/research/">Research</a></dd>
+				<dd><a href="http://www.cl.cam.ac.uk/research/dtg/www/people/">People</a></dd>
+				<dd><a href="http://www.cl.cam.ac.uk/research/dtg/www/publications/">Publications</a></dd>
+				<dd><a href="http://www.cl.cam.ac.uk/research/dtg/www/apply/">New Applicants</a></dd>
+				<dd><a href="/research/dtg/summer/">Summer Internships</a></dd>
+                
+				<dd><a href="http://www.talks.cam.ac.uk/show/index/9808">Seminars</a></dd>
+			</dl>
+			<dl class="links">
+				<dt>DTG Miscellanea</dt>
+				<dd><a href="http://www.cl.cam.ac.uk/research/dtg/www/wiki/">Wiki</a></dd>
+				<dd><a href="/research/dtg/weather/">Weather Station</a></dd>
+				
+				<dd><a href="/research/dtg/android/">Android</a></dd>
+                
+				<dd><a href="/research/dtg/openroommap/static/">OpenRoomMap</a></dd>
+                <dd class="sub"><a href="/research/dtg/openroommap/edit/">Edit the Map</a></dd>
+<dd class="sub"><a href="/research/dtg/openroommap/inventory/">Building Inventory</a></dd>
+<dd class="sub"><a href="/research/dtg/openroommap/">About OpenRoomMap</a></dd>
+			</dl>
+			<dl class="links">
+				<dt>Internal</dt>
+				<dd><a href="http://www.cl.cam.ac.uk/research/dtg/www/resources/">Resources</a></dd>
+				<dd><a href="http://www.cl.cam.ac.uk/research/dtg/www/pparties/">Paper Parties</a></dd>
+				<dd><a href="http://www.cl.cam.ac.uk/research/dtg/www/local/">Pages</a></dd>
 
-<h3>Explaining energy consumption</h3>
+				
 
-<p>The William Gates Building consumes a maximum of around 300kW
-during a busy weekday.  Around 200kW of this is base-load which
-building consumption never drops below regardless of building usage,
-whether its a weekend, or the week after Christmas.  We are interested
-in how to explain this consumption. One means to explain a building's
-electricity consumption is to do sub-metering and we could go as far
-as installing meters on every light and every desktop.  However, this
-is expensive and the energy consumption of the metering itself needs
-to be considered too. We think that actually the majority of the
-energy consumers within the building are static (or predictable) and
-so we want to see if we can construct an explanation for the
-building's consumption based on an accurate inventory.</p>
+				
+			</dl>
+		</div> <!-- content-secondary-->
 
-<p align="right">For more information contact Andrew Rice</p>
+	</div> <!-- #content -->
 
-<h3>Building services</h3>
+	<!-- footer-start -->
+	<ul id="site-info">
+		<li class="copy">
+			<div>dtg-www v1.0.49            - 20110514
+            			<br />&copy; 2010-2011 Digital Technology Group</div>
+		</li>
+		<!-- reverse order as the list is floated right -->
+		<li class="link last"><a href="http://www.cl.cam.ac.uk/research/dtg/www/feedback/">Feedback</a></li>
+<!--		<li class="link"><a href="http://www.talks.cam.ac.uk/show/index/9808">Talks</a></li>-->
+		<li class="link"><a href="http://validator.w3.org/check?uri=referer">Markup</a></li>
+		<li class="link"></li>
+					</ul>
 
-<p>It is relatively straightforward to find out the name of a
-workstation or server that has failed.  A (manual) entry in the
-machine database can then be consulted to work out which room the
-machine is in.  However, for large offices or teaching rooms this
-still leaves an element of manual searching required.  An alternative
-is to consult the internal wiring database for this building, coupled
-with information from switches, and work out which floorbox the
-machine is attached to.  For this to be effective we need to know
-where the floorboxes are. There are numerous other aspects of building
-use which would be useful to collect in future.  Examples include the
-occupant's perception of the building temperature, lighting levels,
-mobile phone coverage, wireless network coverage.</p>
+</div> <!-- #container-->
 
-<h2>Long-term research goal</h2>
-
-<p>The <a href="http://openstreetmap.org/">OpenStreetMap</a> project is a
-highly successful initiative which is building a free, open map of the
-world.  The map is constructed by volunteers who hand edit and
-annotate GPS traces of their journeys.  We are seeing whether it is
-possible to build similar infrastructure for maintaining maps and
-plans of the interior of buildings.  For large organisations this data
-would be useful for measuring inventories; keeping databases of office
-occupants, phone numbers and room use updated; for explaining energy
-consumption and targetting reductions; and for generating maps for
-visitors and meetings.</p>
-
-<p>The application we have written for this study is a first step
-towards understanding this problem.  We hope to get some insight and
-feedback from users of the William Gates Building to help us improve it.</p>
-
-<p>Other research issues which we forsee include
-<ul>
-<li>Entering data for the internals of a building is a different
-operation to external mapping.  In particular it is a constraint based
-problem.  If you move a wall when updating a building plan this has an
-impact on all the rooms which share that wall and the contents of
-those rooms.  Similarly, when placing objects within a room, users are
-more likely to give relative positions such as the desk is in the
-corner, the shelves are above the desk etc.</li>
-<li>How to deal with privacy, confidentiality or security of detailed
-internal data.  Possible approaches might be a distributed database of
-room contents which automatically contribute to centralised aggregate totals.</li>
-<li>What incentives are needed for users to make data updates.
-Projects such as OpenStreetMap seem to attract contributors through no
-direct incentive but maybe indirect community effects are playing a
-part.</li>
-<li>How to distribute updates and manage conflicts?  The OpenStreetMap
-database is a single snap-shot in time.  It doesn't describe
-historical data.  However, historical information is important for
-OpenRoomMap in a number of situations.  Firstly, analysing historical
-electricity meter data (for example) requires the historical state of
-the building.  Secondly, distributing updates to the map requires that
-it must be easy to find out what has changed from a particular point
-in time.</li>
-</ul>
-
-<table cellpadding="0" cellspacing="0" border="0" width="98%" summary="footer">
- <tr>
-  <td bgcolor="#0099cc" colspan="2">
-   <img src="unsaved:///images/pixel.gif" class="block" width="1" height="4" border="0" alt="" />
-
-  </td>
- </tr>
- <tr>
-  <td bgcolor="#cccccc" colspan="2">
-   <img src="unsaved:///images/pixel.gif" class="block" width="1" height="2" border="0" alt="" />
-  </td>
- </tr>
- <tr>
-  <td>
-
-   <div class="footer">
-    <p>&copy; 2009 Computer Laboratory, University of Cambridge
-   </div>
-  </td>
- </tr>
-</table>
-<!--  end footer -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-15341546-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
 
 </body>
 </html>
