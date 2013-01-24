@@ -7,6 +7,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -37,7 +38,8 @@ public class OrmServlet extends HttpServlet {
 	public void init() throws ServletException
 	{
 	    try {
-		String logFileName = getInitParameter("LOG_FILE");
+		ServletContext context = getServletContext();
+		String logFileName = context.getInitParameter("LOG_FILE");
 		if (logFileName == null) throw new ServletException("Please specify init parameter LOG_FILE");
 	        FileHandler lLogger = new FileHandler(logFileName);
 	        Logger.getLogger("ojw28.orm.servlet.OrmServlet").addHandler(lLogger);
