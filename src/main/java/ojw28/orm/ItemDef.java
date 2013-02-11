@@ -10,6 +10,7 @@ public class ItemDef {
 	
 	private float mHeight;
 	private boolean mFlipable;
+	private boolean mMovable;
 	private int mDefId;
 	private String mName;
 	private String mDescription;
@@ -18,7 +19,7 @@ public class ItemDef {
 	private String mFieldLabel;
 	private int mOrdering;
 	
-	public ItemDef(int iDefId, String iName, int iOrdering, String iCategory, String iImageFile, String iDescription, String iFieldLabel, boolean iFlipable, float iHeight, ItemDefPoly[] iPolys)
+	public ItemDef(int iDefId, String iName, int iOrdering, String iCategory, String iImageFile, String iDescription, String iFieldLabel, boolean iFlipable, boolean iMovable, float iHeight, ItemDefPoly[] iPolys)
 	{
 		mDefId = iDefId;
 		mName = iName;
@@ -28,6 +29,7 @@ public class ItemDef {
 		mHeight = iHeight;
 		mDescription = iDescription;
 		mFlipable = iFlipable;
+		mMovable = iMovable;
 		mPolys = iPolys;
 		mOrdering = iOrdering;
 	}
@@ -71,6 +73,11 @@ public class ItemDef {
 	{
 		return mFlipable;
 	}
+
+	public boolean isMovable()
+	{
+		return mMovable;
+	}
 	
 	public String getDescription()
 	{
@@ -98,6 +105,7 @@ public class ItemDef {
 		lFurnitureElement.setAttribute("description", ""+mDescription);		
 		lFurnitureElement.setAttribute("height", ""+mHeight);		
 		lFurnitureElement.setAttribute("flipable", ""+mFlipable);
+		lFurnitureElement.setAttribute("movable", ""+mMovable);
 		lFurnitureElement.setAttribute("field_label", ""+mFieldLabel);
 		
 		for(int li = 0; li < mPolys.length; li++)
@@ -117,6 +125,7 @@ public class ItemDef {
 		mDescription = iElement.getAttribute("description");
 		mHeight = Float.parseFloat(iElement.getAttribute("height"));
 		mFlipable = Boolean.parseBoolean(iElement.getAttribute("flipable"));
+		mMovable = iElement.hasAttribute("movable") ? Boolean.parseBoolean(iElement.getAttribute("movable")) : true;
 		mFieldLabel = iElement.getAttribute("field_label");
 		
 		NodeList lPolyNodes = iElement.getElementsByTagName("Poly");

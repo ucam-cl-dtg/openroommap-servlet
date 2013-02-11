@@ -73,6 +73,7 @@ public class ItemDefHandler extends ServletRequestHandler
 							
 							float lHeight = lItemRes.getFloat("height");
 							boolean lFlipable = lItemRes.getBoolean("flipable");
+							boolean lMovable = lItemRes.getBoolean("movable");
 
 							lPolyStatement.setInt(1, lItemId);
 							ResultSet lPolyRes = lPolyStatement.executeQuery();
@@ -109,7 +110,7 @@ public class ItemDefHandler extends ServletRequestHandler
 							lTempPolys.toArray(lPolyArray);
 
 
-							ItemDef lDef = new ItemDef(lItemId,lName,lOrdering,lCategory,lImageFile,lDescription,lFieldLabel,lFlipable,lHeight,lPolyArray);
+							ItemDef lDef = new ItemDef(lItemId,lName,lOrdering,lCategory,lImageFile,lDescription,lFieldLabel,lFlipable,lMovable,lHeight,lPolyArray);
 							lDef.writeToXml(iDocument, iParent);
 						}
 					}

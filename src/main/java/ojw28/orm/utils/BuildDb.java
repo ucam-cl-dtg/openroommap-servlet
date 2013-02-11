@@ -193,6 +193,7 @@ public class BuildDb {
 					"height FLOAT NOT NULL,"+
 					"flipable BOOLEAN NOT NULL," +
 					"field_label VARCHAR(255) NOT NULL," +
+					"movable BOOLEAN NOT NULL DEFAULT TRUE," +
 					"PRIMARY KEY(def_id))"
 			);		
 
@@ -286,7 +287,7 @@ public class BuildDb {
 		{
 			System.out.println(iItem.getItemDefId());
 			lInsertItem = iConnection.prepareStatement("INSERT INTO " +
-					"item_definition_table(def_id,name,category,image_file,description,height,flipable,field_label,ordering) VALUES" +
+					"item_definition_table(def_id,name,category,image_file,description,height,flipable,movable,field_label,ordering) VALUES" +
 					"(?,?,?,?,?,?,?,?,?)");
 			lInsertItem.setInt(1, iItem.getItemDefId());
 			lInsertItem.setString(2, iItem.getName());
@@ -295,8 +296,9 @@ public class BuildDb {
 			lInsertItem.setString(5, iItem.getDescription());	
 			lInsertItem.setFloat(6, iItem.getHeight());	
 			lInsertItem.setBoolean(7, iItem.isFlipable());
-			lInsertItem.setString(8, iItem.getFieldLabel());
-			lInsertItem.setInt(9, iItem.getOrdering());
+			lInsertItem.setBoolean(8, iItem.isMovable());
+			lInsertItem.setString(9, iItem.getFieldLabel());
+			lInsertItem.setInt(10, iItem.getOrdering());
 			
 			lInsertItem.executeUpdate();
 			System.out.println(lInsertItem.toString()+";");
