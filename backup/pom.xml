@@ -5,6 +5,7 @@
     <groupId>uk.ac.cam.cl.dtg</groupId>
     <artifactId>parent</artifactId>
     <version>1.0.1</version>
+    <relativePath></relativePath><!-- this is needed to stop maven warning that the parent pom conflicts with ../pom.xml -->
   </parent>
   <artifactId>open-room-map-backup</artifactId>
   <packaging>pom</packaging>
@@ -12,8 +13,11 @@
        job nightly and replace the previous artifact with this one -->
   <version>1.0.0-SNAPSHOT</version>
   <name>Open-Room-Map Database Backup</name>
+  <description>Packages a backup of the data from an OpenRoomMap server.  Designed to be run at regular intervals producing SNAPSHOT versioned builds</description>
   <properties>
-    <backupScript>${basedir}/src/main/scripts/backup.sh</backupScript>
+    <backup.script>${basedir}/src/main/scripts/backup.sh</backup.script>
+    <backup.host>localhost</backup.host>
+    <backup.class>testing</backup.class>
   </properties>
   <build>
     <plugins>
@@ -34,7 +38,8 @@
 	  <executable>bash</executable>
 	  <workingDirectory>${project.build.directory}</workingDirectory>
 	  <arguments>
-	    <argument>${backupScript}</argument>
+	    <argument>${backup.script}</argument>
+	    <argument>${backup.host}</argument>
 	  </arguments>
 	</configuration>
       </plugin>
@@ -52,7 +57,6 @@
 	</executions>
 	<configuration>
 	  <finalName>${project.artifactId}-${project.version}</finalName>
-	  <appendAssemblyId>false</appendAssemblyId>
 	  <descriptors>
 	    <descriptor>assembly.xml</descriptor>
 	  </descriptors>

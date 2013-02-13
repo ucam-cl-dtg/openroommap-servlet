@@ -4,7 +4,7 @@
 # return value the script should die too
 set -e
 
-HOST=open-room-map.dtg.cl.cam.ac.uk
+HOST=$1
 DB=openroommap
 USER=orm
 PASSWORD=openroommap
