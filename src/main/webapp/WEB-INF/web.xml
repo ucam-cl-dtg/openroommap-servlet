@@ -23,6 +23,6 @@
 
 	<context-param>
 	  <param-name>LOG_FILE</param-name>
-	  <param-value>/var/lib/tomcat7/webapps/openroommap/orm.log</param-value>
+	  <param-value>/var/lib/tomcat8/webapps/openroommap/orm.log</param-value>
 	</context-param>
 </web-app>
